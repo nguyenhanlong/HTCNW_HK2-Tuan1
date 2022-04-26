@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/logo-cong-ty-my-pham-kuddy-removebg-preview.png" type=" image/x-icon ">
+    <!-- Box icons -->
+    <link rel="stylesheet " href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css " />
+
+
+    <script crossorigin="anonymous " src="https://kit.fontawesome.com/c8e4d183c2.js "></script>
+
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet " href="./css/styles.css " />
+    <title>SHOP KUDDY COSMETICS</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="home " class="header ">
+        <!-- Navigation -->
+        <nav class="nav ">
+            <div class="navigation container ">
+                <div class="logo ">
+                    <a href="#" class="logo">
+                        <img src="./images/logo-cong-ty-my-pham-kuddy-removebg-preview.png" style="display:block; max-width:230px; max-height:95px; width:auto; height:auto"></a>
+                </div>
+
+                <div class="menu ">
+                    <div class="top-nav ">
+                        <div class="logo ">
+                            <h1>SHOP KUDDY COSMETICS</h1>
+                        </div>
+                        <div class="close ">
+                            <i class="bx bx-x "></i>
+                        </div>
+                    </div>
+
+                    <ul class="nav-list ">
+                        <li class="nav-item ">
+                            <a href="index.html" class="nav-link  ">HOME</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="product.html " class="nav-link ">PRODUCTS</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="product-details.html" class="nav-link  ">PRODUCT DETAILS</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="about.html" class="nav-link ">ABOUT</a>
+                        </li>
+
+                        <!--right-menu----------->
+                        <div class="right-menu ">
+                            <a href="javascript:void(0); " class="search ">
+                                <i class="fas fa-search "></i>
+                            </a>
+                            <a href="javascript:void(0); " class="user ">
+                                <i class="far fa-user "></i>
+                            </a>
+                            <a href="cart.html">
+                                <i class="fas fa-shopping-cart ">
+            <span class="num-cart-product ">0</span>
+                                </i>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="hamburger ">
+                    <i class="bx bx-menu "></i>
+                </div>
+            </div>
+        </nav>
+
+
+        <!--search-bar----------------------------------->
+        <div class="search-bar ">
+
+            <!--search-input------->
+            <div class="search-input ">
+                <input type="text " placeholder="Search For Product " name="search " />
+                <!--cancel-btn--->
+                <a href="javascript:void(0); " class="search-cancel ">
+                    <i class="fas fa-times "></i>
+                </a>
+            </div>
+        </div>
+        <!---login-and-sign-up--------------------------------->
+        <div class="form">
+            <!--login---------->
+            <div class="login-form">
+                <!--cancel-btn---------------->
+                <a href="javascript:void(0);" class="form-cancel">
+                    <i class="fas fa-times"></i>
+                </a>
+                <strong>Log In</strong>
+                <!--inputs-->
+                <form>
+                    <input type="email" name="email" placeholder="Example@gmail.com" required/>
+                    <input type="password" name="password" placeholder="Password" required/>
+                    <input type="submit" value="Log In" />
+                </form>
+                <!--forget-and-sign-up-btn-->
+                <div class="form-btns">
+                    <a href="#" class="forget">Forget Your Password?</a>
+                    <a href="javascript:void(0);" class="sign-up-btn">Create Account</a>
+                </div>
+            </div>
+            <!--Sign-up---------->
+            <div class="sign-up-form">
+                <!--cancel-btn---------------->
+                <a href="javascript:void(0);" class="form-cancel">
+                    <i class="fas fa-times"></i>
+                </a>
+                <strong>Sign Up</strong>
+                <!--inputs-->
+                <form>
+                    <input type="text" name="full name" placeholder="Full Name" required/>
+                    <input type="email" name="email" placeholder="Example@gmail.com" required/>
+                    <input type="password" name="password" placeholder="Password" required/>
+                    <input type="submit" value="Sign Up" />
+                </form>
+                <!--forget-and-sign-up-btn-->
+                <div class="form-btns">
+                    <a href="javascript:void(0);" class="already-account">
+                    Already Have Account?</a>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!---JQUERY-->
+        <SCRIPT SRC="js/jquery.js "></SCRIPT>
+        <!---SCRIPT-->
+        <script type="text/javascript ">
+            /*-----For Search Bar-----------------------------*/
+            $(document).on('click', '.search', function() {
+                $('.search-bar').addClass('search-bar-active')
+            });
+
+            $(document).on('click', '.search-cancel', function() {
+                $('.search-bar').removeClass('search-bar-active')
+            });
+
+
+            /*---For Login and Sign-up----------------------------*/
+            $(document).on('click', '.user,.already-account', function() {
+                $('.form').addClass('login-active').removeClass('sign-up-active')
+            });
+
+            $(document).on('click', '.sign-up-btn', function() {
+                $('.form').addClass('sign-up-active').removeClass('login-active')
+            });
+
+            $(document).on('click', '.form-cancel', function() {
+                $('.form').removeClass('login-active').removeClass('sign-up-active')
+            });
+            /*For Go Back To Main Page---------------------*/
+            $(document).ready(function() {
+                $('.form-cancel').click(function() {
+                    $('.login-form').removeClass('login-active, sign-up-active')
+                })
+            });
+        </script>
+
+
+        <!-- Hero -->
+        <img src="./images/banner.png " alt=" " class="hero-img " />
+
+        <div class="hero-content ">
+            <h2><span class="discount ">70% </span> SALE OFF</h2>
+            <h1>
+                <span>BIG SALE</span>
+                <span></span>
+            </h1>
+            <a class="btn " href="# ">shop now</a>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <section class="advert section ">
+            <div class="advert-center container ">
+                <div class="advert-box ">
+                    <div class="dotted ">
+                        <div class="content ">
+                            <h2>
+                                Girls <br /> Cosmetic
+                            </h2>
+                            <h4>Worlds Best Brands</h4>
+                        </div>
+                    </div>
+                    <img src="./images/advert1.png " alt=" ">
+                </div>
+
+                <div class="advert-box ">
+                    <div class="dotted ">
+                        <div class="content ">
+                            <h2>
+                                Boys <br /> Cosmetic
+                            </h2>
+                            <h4>Worlds Best Brands</h4>
+                        </div>
+                    </div>
+                    <img src="./images/advert2.png " alt=" ">
+                </div>
+
+                <div class="advert-box ">
+                    <div class="dotted ">
+                        <div class="content ">
+                            <h2>
+                                Brand <br /> Cosmetic
+                            </h2>
+                            <h4>Worlds Best Brands</h4>
+                        </div>
+                    </div>
+                    <img src="./images/advert3.png " alt=" ">
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured -->
+        <section class="section featured ">
+            <div class="title ">
+                <h1>Featured Products</h1>
+            </div>
+
+            <div class="product-center container ">
+                <div class="product ">
+                    <div class="product-header ">
+                        <img src="./images/pic2.jpg " alt=" ">
+                        <ul class="icons ">
+                            <span><i class="bx bx-heart "></i></span>
+                            <a href="cart.html"><span><i class="fas fa-shopping-cart"></i></span>
+                            </a>
+                            <a href="product-details.html"><span><i class="bx bx-search "></i></span>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="product-footer ">
+                        <a href="# ">
+                            <h3>Tẩy Trang</h3>
+                        </a>
+                        <div class="rating ">
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                        </div>
+                        <h4 class="price ">499.000đ</h4>
+                    </div>
+                </div>
+                <div class="product ">
+                    <div class="product-header ">
+                        <img src="./images/pic1.jpg " alt=" ">
+                        <ul class="icons ">
+                            <span><i class="bx bx-heart "></i></span>
+                            <a href="cart.html"><span><i class="fas fa-shopping-cart"></i></span>
+                            </a>
+                            <a href="product-details.html"><span><i class="bx bx-search "></i></span>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="product-footer ">
+                        <a href="# ">
+                            <h3>Sữa Tắm</h3>
+                        </a>
+                        <div class="rating ">
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bx-star "></i>
+                        </div>
+                        <h4 class="price ">399.000đ</h4>
+                    </div>
+                </div>
+                <div class="product ">
+                    <div class="product-header ">
+                        <img src="./images/pic3.jpg " alt=" ">
+                        <ul class="icons ">
+                            <span><i class="bx bx-heart "></i></span>
+                            <a href="cart.html"><span><i class="fas fa-shopping-cart "></i></span>
+                            </a>
+                            <a href="product-details.html"><span><i class="bx bx-search "></i></span>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="product-footer ">
+                        <a href="# ">
+                            <h3>Tẩy Trang</h3>
+                        </a>
+                        <div class="rating ">
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bx-star "></i>
+                        </div>
+                        <h4 class="price ">277.000đ</h4>
+                    </div>
+                </div>
+                <div class="product ">
+                    <div class="product-header ">
+                        <img src="./images/pic4.jpg " alt=" ">
+
+                        <ul class="icons ">
+                            <span><i class="bx bx-heart "></i></span>
+                            <a href="cart.html"><span><i class="fas fa-shopping-cart "></i></span>
+                            </a>
+                            <a href="product-details.html"><span><i class="bx bx-search "></i></span>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="product-footer ">
+                        <a href="# ">
+                            <h3>Sữa Rửa Mặt</h3>
+                        </a>
+                        <div class="rating ">
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bx-star "></i>
+                        </div>
+                        <h4 class="price ">330.000đ</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Latest -->
+        <section class="section featured ">
+            <div class="title ">
+                <h1>Latest Products</h1>
+            </div>
+
+            <div class="product-center container ">
+                <div class="product ">
+                    <div class="product-header ">
+                        <img src="./images/pic5.jpg " alt=" ">
+
+                        <ul class="icons ">
+                            <span><i class="bx bx-heart "></i></span>
+                            <a href="cart.html"><span><i class="fas fa-shopping-cart"></i></span>
+                            </a>
+                            <a href="product-details.html"><span><i class="bx bx-search "></i></span>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="product-footer ">
+                        <a href="# ">
+                            <h3>Lotion</h3>
+                        </a>
+                        <div class="rating ">
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bx-star "></i>
+                        </div>
+                        <h4 class="price ">277.000đ</h4>
+                    </div>
+                </div>
+                <div class="product ">
+                    <div class="product-header ">
+                        <img src="./images/pic2.jpg " alt=" ">
+
+                        <ul class="icons ">
+                            <span><i class="bx bx-heart "></i></span>
+                            <a href="cart.html"></a><span><i class="fas fa-shopping-cart "></i></span>
+                            </a>
+                            <a href="product-details.html"><span><i class="bx bx-search "></i></span>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="product-footer ">
+                        <a href="# ">
+                            <h3>Tẩy Trang</h3>
+                        </a>
+                        <div class="rating ">
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                        </div>
+                        <h4 class="price ">499.000đ</h4>
+                    </div>
+                </div>
+                <div class="product ">
+                    <div class="product-header ">
+                        <img src="./images/pic1.jpg " alt=" ">
+
+                        <ul class="icons ">
+                            <span><i class="bx bx-heart "></i></span>
+                            <a href="cart.html"><span><i class="fas fa-shopping-cart"></i></span>
+                            </a>
+                            <a href="product-details.html"><span><i class="bx bx-search "></i></span>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="product-footer ">
+                        <a href="# ">
+                            <h3>Sữa Tắm</h3>
+                        </a>
+                        <div class="rating ">
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                        </div>
+                        <h4 class="price ">399.000đ</h4>
+                    </div>
+                </div>
+                <div class="product ">
+                    <div class="product-header ">
+                        <img src="./images/pic4.jpg " alt=" ">
+
+                        <ul class="icons ">
+                            <span><i class="bx bx-heart "></i></span>
+                            <a href="cart.html"><span><i class="fas fa-shopping-cart "></i></span>
+                            </a>
+                            <a href="product-details.html"><span><i class="bx bx-search "></i></span>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="product-footer ">
+                        <a href="# ">
+                            <h3>Sữa Rửa Mặt</h3>
+                        </a>
+                        <div class="rating ">
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bx-star "></i>
+                        </div>
+                        <h4 class="price ">330.000đ</h4>
+                    </div>
+                </div>
+                <div class="product ">
+                    <div class="product-header ">
+                        <img src="./images/pic1.jpg " alt=" ">
+
+                        <ul class="icons ">
+                            <span><i class="bx bx-heart "></i></span>
+                            <a href="cart.html"><span><i class="fas fa-shopping-cart "></i></span>
+                            </a>
+                            <a href="product-details.html"><span><i class="bx bx-search "></i></span>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="product-footer ">
+                        <a href="# ">
+                            <h3>Sữa Tắm</h3>
+                        </a>
+                        <div class="rating ">
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bx-star "></i>
+                        </div>
+                        <h4 class="price ">399.000đ</h4>
+                    </div>
+                </div>
+                <div class="product ">
+                    <div class="product-header ">
+                        <img src="./images/pic3.jpg " alt=" ">
+
+                        <ul class="icons ">
+                            <span><i class="bx bx-heart "></i></span>
+                            <a href="cart.html"><span><i class="fas fa-shopping-cart "></i></span>
+                            </a>
+                            <a href="product-details.html"><span><i class="bx bx-search "></i></span>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="product-footer ">
+                        <a href="# ">
+                            <h3>Tẩy Trang</h3>
+                        </a>
+                        <div class="rating ">
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bx-star "></i>
+                        </div>
+                        <h4 class="price ">277.000đ</h4>
+                    </div>
+                </div>
+                <div class="product ">
+                    <div class="product-header ">
+                        <img src="./images/pic2.jpg " alt=" ">
+
+                        <ul class="icons ">
+                            <span><i class="bx bx-heart "></i></span>
+                            <a href="cart.html"><span><i class="fas fa-shopping-cart "></i></span>
+                            </a>
+                            <a href="product-details.html"><span><i class="bx bx-search "></i></span>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="product-footer ">
+                        <a href="# ">
+                            <h3>Tẩy Trang</h3>
+                        </a>
+                        <div class="rating ">
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bx-star "></i>
+                        </div>
+                        <h4 class="price ">330.000đ</h4>
+                    </div>
+                </div>
+                <div class="product ">
+                    <div class="product-header ">
+                        <img src="./images/pic6.jpg " alt=" ">
+
+                        <ul class="icons ">
+                            <span><i class="bx bx-heart "></i></span>
+                            <a href="cart.html"><span><i class="fas fa-shopping-cart "></i></span>
+                            </a>
+                            <a href="product-details.html"><span><i class="bx bx-search "></i></span>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="product-footer ">
+                        <a href="# ">
+                            <h3>Chóng Nắng</h3>
+                        </a>
+                        <div class="rating ">
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                        </div>
+                        <h4 class="price ">440.000đ</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Banner -->
+        <section class="section ">
+            <div class="product-banner ">
+                <div class="left ">
+                    <img src="./images/test.jpg " alt=" " />
+                </div>
+                <div class="right ">
+                    <div class="content ">
+                        <h2><span class="discount ">70% </span> SALE OFF</h2>
+                        <h1>
+                            <span>Collect Your</span>
+                            <span> Collection</span>
+                        </h1>
+                        <a class="btn " href="# ">shop now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section ">
+            <div class="testimonial-center container ">
+                <div class="testimonial ">
+                    <span>&ldquo;</span>
+                    <p>
+                        Tuyệt quá tôi đang rất đau đầu trong việc tìm ra thứ mình cần , nhưng nhờ shop này mà tôi tìm được thứ mình luôn tìm kiếm bấy lấu nay cho da mình.
+                    </p>
+                    <div class="rating ">
+                        <i class="bx bxs-star "></i>
+                        <i class="bx bxs-star "></i>
+                        <i class="bx bxs-star "></i>
+                        <i class="bx bxs-star "></i>
+                        <i class="bx bx-star "></i>
+                    </div>
+                    <div class="img-cover ">
+                        <img src="./images/profile1.jpg " alt=" " />
+                    </div>
+                    <h4>Linda thảo</h4>
+                </div>
+                <div class="testimonial ">
+                    <span>&ldquo;</span>
+                    <p>
+                        Tôi thật sự bất ngờ về quá trình làm việc của shop , rất tận tâm chăm sóc khách hàng !
+                    </p>
+                    <div class="rating ">
+                        <i class="bx bxs-star "></i>
+                        <i class="bx bxs-star "></i>
+                        <i class="bx bxs-star "></i>
+                        <i class="bx bxs-star "></i>
+                        <i class="bx bxs-star "></i>
+                    </div>
+                    <div class="img-cover ">
+                        <img src="./images/profile2.jpg " alt=" " />
+                    </div>
+                    <h4>HARRY POSTER</h4>
+                </div>
+                <div class="testimonial ">
+                    <span>&ldquo;</span>
+                    <p>
+                        OMG! I like shop ....
+                    </p>
+                    <div class="rating ">
+                        <i class="bx bxs-star "></i>
+                        <i class="bx bxs-star "></i>
+                        <i class="bx bxs-star "></i>
+                        <i class="bx bxs-star "></i>
+                        <i class="bx bxS-star "></i>
+                    </div>
+                    <div class="img-cover ">
+                        <img src="./images/profile3.jpg " alt=" " />
+                    </div>
+                    <h4>WENDY SENIS</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brands -->
+        <main>
+            <!--services------------------------->
+            <section class="services">
+                <!--services-box---------->
+                <div class="services-box">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span>Free Shipping</span>
+                    <p>Free Shipping for all US order</p>
+                </div>
+                <!--services-box---------->
+                <div class="services-box">
+                    <i class="fas fa-headphones-alt"></i>
+                    <span>Support 24/7</span>
+                    <p>We support 24h a day</p>
+                </div>
+                <!--services-box---------->
+                <div class="services-box">
+                    <i class="fas fa-sync"></i>
+                    <span>100% Money Back</span>
+                    <p>You have 30 days to Return</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer id="footer" class="section footer">
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-center">
+                        <h3>EXTRAS</h3>
+                        <a href="#">Brands</a>
+                        <a href="#">Gift Certificates</a>
+
+
+                    </div>
+                    <div class="footer-center">
+                        <h3>INFORMATION</h3>
+                        <a href="#">About Us</a>
+                        <a href="#">Contact Us</a>
+
+                    </div>
+                    <div class="footer-center">
+                        <h3>MY ACCOUNT</h3>
+                        <a href="#">My Account</a>
+                    </div>
+                    <div class="footer-center">
+                        <h3>CONTACT US</h3>
+                        <div>
+                            <span>
+                <i class="fas fa-map-marker-alt"></i>
+                </span> Đại học Công Nghệp Tp.HCM
+                        </div>
+                        <div>
+                            <span>
+                <i class="far fa-envelope "></i>
+                </span> linhcm981a@gmail.com
+                        </div>
+                        <div>
+                            <span>
+                <i class="far fa-envelope "></i>
+                </span> hathienphuck15@gmail.com
+                        </div>
+                        <div>
+                            <span>
+                <i class="fas fa-phone "></i>
+                </span> 0919749248
+                        </div>
+                        <div>
+                            <span>
+                <i class="fas fa-phone "></i>
+                </span> 0835799064
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!--subcribe---------------->
+            <div class="subscribe">
+                <form>
+                    <input type="email" placeholder="Example@gmail.com" required/>
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
+        </footer>
+        <!-- End Footer -->
+
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js "></script>
+        <!-- Custom Script -->
+        <script src="./js/index.js "></script>
+</body>
+
+</html>

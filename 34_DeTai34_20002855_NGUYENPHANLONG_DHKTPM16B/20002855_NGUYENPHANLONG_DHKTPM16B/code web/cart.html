@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/logo-cong-ty-my-pham-kuddy-removebg-preview.png" type="image/x-icon">
+
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/c8e4d183c2.js"></script>
+
+    <!-- Box icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>SHOP KUDDY COSMETICS</title>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="navigation container">
+            <div class="logo">
+                <h1>YOUR CART</h1>
+            </div>
+
+            <div class="menu">
+                <div class="top-nav">
+                    <div class="logo">
+                        <h1>SHOP KUDDY COSMETICS</h1>
+                    </div>
+                    <div class="close">
+                        <i class="bx bx-x"></i>
+                    </div>
+                </div>
+                <ul class="nav-list ">
+                    <li class="nav-item ">
+                        <a href="index.html" class="nav-link ">HOME</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="product.html " class="nav-link ">PRODUCTS</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="product-details.html" class="nav-link ">PRODUCT DETAILS</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="about.html" class="nav-link ">ABOUT</a>
+                    </li>
+
+                    <!--right-menu----------->
+                    <div class="right-menu ">
+                        <a href="javascript:void(0); " class="search ">
+                            <i class="fas fa-search "></i>
+                        </a>
+                        <a href="javascript:void(0); " class="user ">
+                            <i class="far fa-user "></i>
+                        </a>
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-cart ">
+      <span class="num-cart-product ">0</span>
+                          </i>
+                        </a>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="hamburger">
+                <i class="bx bx-menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!--search-bar----------------------------------->
+    <div class="search-bar ">
+
+        <!--search-input------->
+        <div class="search-input ">
+            <input type="text " placeholder="Search For Product " name="search " />
+            <!--cancel-btn--->
+            <a href="javascript:void(0); " class="search-cancel ">
+                <i class="fas fa-times "></i>
+            </a>
+        </div>
+    </div>
+    <!---login-and-sign-up--------------------------------->
+    <div class="form">
+        <!--login---------->
+        <div class="login-form">
+            <!--cancel-btn---------------->
+            <a href="javascript:void(0);" class="form-cancel">
+                <i class="fas fa-times"></i>
+            </a>
+            <strong>Log In</strong>
+            <!--inputs-->
+            <form>
+                <input type="email" name="email" placeholder="Example@gmail.com" required/>
+                <input type="password" name="password" placeholder="Password" required/>
+                <input type="submit" value="Log In" />
+            </form>
+            <!--forget-and-sign-up-btn-->
+            <div class="form-btns">
+                <a href="#" class="forget">Forget Your Password?</a>
+                <a href="javascript:void(0);" class="sign-up-btn">Create Account</a>
+            </div>
+        </div>
+        <!--Sign-up---------->
+        <div class="sign-up-form">
+            <!--cancel-btn---------------->
+            <a href="javascript:void(0);" class="form-cancel">
+                <i class="fas fa-times"></i>
+            </a>
+            <strong>Sign Up</strong>
+            <!--inputs-->
+            <form>
+                <input type="text" name="full name" placeholder="Full Name" required/>
+                <input type="email" name="email" placeholder="Example@gmail.com" required/>
+                <input type="password" name="password" placeholder="Password" required/>
+                <input type="submit" value="Sign Up" />
+            </form>
+            <!--forget-and-sign-up-btn-->
+            <div class="form-btns">
+                <a href="javascript:void(0);" class="already-account">
+                    Already Have Account?</a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!---JQUERY-->
+    <SCRIPT SRC="js/jquery.js "></SCRIPT>
+    <!---SCRIPT-->
+    <script type="text/javascript ">
+        /*-----For Search Bar-----------------------------*/
+        $(document).on('click', '.search', function() {
+            $('.search-bar').addClass('search-bar-active')
+        });
+
+        $(document).on('click', '.search-cancel', function() {
+            $('.search-bar').removeClass('search-bar-active')
+        });
+
+
+        /*---For Login and Sign-up----------------------------*/
+        $(document).on('click', '.user,.already-account', function() {
+            $('.form').addClass('login-active').removeClass('sign-up-active')
+        });
+
+        $(document).on('click', '.sign-up-btn', function() {
+            $('.form').addClass('sign-up-active').removeClass('login-active')
+        });
+
+        $(document).on('click', '.form-cancel', function() {
+            $('.form').removeClass('login-active').removeClass('sign-up-active')
+        });
+
+        /*For Go Back To Main Page---------------------*/
+        $(document).ready(function() {
+            $('.form-cancel').click(function() {
+                $('.login-form').removeClass('login-active, sign-up-active')
+            })
+        });
+    </script>
+
+    <!-- Cart Items -->
+    <div class="container-md cart">
+        <table>
+            <tr>
+                <th>Sản Phẩm</th>
+                <th>Tổng</th>
+                <th>Thành Tiền</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="./images/pic1.jpg" alt="">
+                        <div>
+                            <p>Sữa Tắm</p>
+                            <span>399.000đ</span>
+                            <br />
+                            <a href="#">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1" min="1"></td>
+                <td>399.000đ</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="./images/pic2.jpg" alt="">
+                        <div>
+                            <p>Tẩy Trang</p>
+                            <span>499.000đ</span>
+                            <br />
+                            <a href="#">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1" min="1"></td>
+                <td>499.000đ</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="./images/pic3.jpg" alt="">
+                        <div>
+                            <p>Tẩy Trang </p>
+                            <span>277.000đ</span>
+                            <br />
+                            <a href="#">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1" min="1"></td>
+                <td>277.000đ</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="./images/pic4.jpg" alt="">
+                        <div>
+                            <p>Sữa Rửa MẶT</p>
+                            <span>300.000đ</span>
+                            <br />
+                            <a href="#">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1" min="1"></td>
+                <td>300.000đ</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="./images/pic5.jpg" alt="">
+                        <div>
+                            <p>Lotion</p>
+                            <span>277.000đ</span>
+                            <br />
+                            <a href="#">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1" min="1"></td>
+                <td>277.000đ</td>
+            </tr>
+        </table>
+
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>Tổng</td>
+                    <td>1.780.000đ</td>
+                </tr>
+                <tr>
+                    <td>Thuế</td>
+                    <td>130.000đ</td>
+                </tr>
+                <tr>
+                    <td>Tổng</td>
+                    <td>1.910.000</td>
+                </tr>
+            </table>
+            <a href="#" class="checkout btn">Thanh Toán</a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer id="footer" class="section footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-center">
+                    <h3>EXTRAS</h3>
+                    <a href="#">Brands</a>
+                    <a href="#">Gift Certificates</a>
+
+
+                </div>
+                <div class="footer-center">
+                    <h3>INFORMATION</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact Us</a>
+
+                </div>
+                <div class="footer-center">
+                    <h3>MY ACCOUNT</h3>
+                    <a href="#">My Account</a>
+                </div>
+                <div class="footer-center">
+                    <h3>CONTACT US</h3>
+                    <div>
+                        <span>
+      <i class="fas fa-map-marker-alt "></i>
+      </span> Đại học Công Nghệp Tp.HCM
+                    </div>
+                    <div>
+                        <span>
+      <i class="far fa-envelope "></i>
+      </span> linhcm981a@gmail.com
+                    </div>
+                    <div>
+                        <span>
+      <i class="far fa-envelope "></i>
+      </span> hathienphuck15@gmail.com
+                    </div>
+                    <div>
+                        <span>
+      <i class="fas fa-phone "></i>
+      </span> 0919749248
+                    </div>
+                    <div>
+                        <span>
+      <i class="fas fa-phone "></i>
+      </span> 0835799064
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!--subcribe---------------->
+        <div class="subscribe">
+            <form>
+                <input type="email" placeholder="Example@gmail.com" required/>
+                <input type="submit" value="Subscribe">
+            </form>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <!-- Custom Script -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
